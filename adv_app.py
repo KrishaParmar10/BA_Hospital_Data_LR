@@ -9,7 +9,6 @@ st.title('Hospital Total Cost Prediction App')
 
 # Input features
 Age = st.number_input('Age', min_value=0.0)
-Body Weight = st.number_input('Body Weight', min_value=0.0)
 Body Height = st.number_input('Body Height', min_value=0.0)
 BP High = st.number_input('BP High', min_value=0.0)
 BP Low = st.number_input('BP Low', min_value=0.0)
@@ -22,3 +21,4 @@ if st.button('Predict Hospital Total Cost'):
     input_data = np.array([[Age, Body Weight, Body Height, BP High, BP Low, HB, UREA, Creatine]])
     prediction = model.predict(input_data)[0]
     st.success(f'Predicted Hospital Cost: {prediction:.2f}')
+
